@@ -1,0 +1,31 @@
+[project]
+name = "talk-to-your-docs"
+version = "0.1.0"
+description = "A Streamlit documentation Q&A agent powered by Agno MCP tools and Nebius AI."
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "agno>=2.2.0",
+    "mcp>=1.16.0",
+    "openai>=1.109.0",
+    "python-dotenv>=1.1.1",
+    "streamlit>=1.49.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.0",
+    "ruff>=0.12.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+

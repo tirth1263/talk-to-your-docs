@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Talk to Your Docs is a Streamlit documentation Q&A agent powered by Agno MCP tools and Nebius AI."
+    />
+    <title>Talk to Your Docs</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Talk to Your Docs home">
+        <span class="brand-mark">T</span>
+        <span>Talk to Your Docs</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#features">Features</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#setup">Setup</a>
+        <a class="github-link" href="https://github.com/tirth1263/talk-to-your-docs">GitHub</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-label="Project introduction">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Agno MCP + Nebius AI + Streamlit</p>
+          <h1>Talk to Your Docs</h1>
+          <p class="hero-copy">
+            A documentation Q&A agent that connects to hosted MCP docs servers,
+            searches source material, and turns scattered pages into useful answers.
+          </p>
+          <div class="hero-actions" aria-label="Project links">
+            <a class="primary-action" href="https://github.com/tirth1263/talk-to-your-docs">View repository</a>
+            <a class="secondary-action" href="#setup">Run the app</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">What it does</p>
+          <h2>Documentation becomes conversational</h2>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <span class="feature-icon">AI</span>
+            <h3>AI answers</h3>
+            <p>Uses Nebius AI with DeepSeek-V3-0324 to answer technical questions clearly.</p>
+          </article>
+          <article>
+            <span class="feature-icon">MCP</span>
+            <h3>Docs-native search</h3>
+            <p>Connects to MCP search endpoints so answers stay grounded in real documentation.</p>
+          </article>
+          <article>
+            <span class="feature-icon">URL</span>
+            <h3>Flexible sources</h3>
+            <p>Point it at Mintlify-style docs or any compatible streamable HTTP MCP server.</p>
+          </article>
+          <article>
+            <span class="feature-icon">UI</span>
+            <h3>Streamlit chat</h3>
+            <p>Provides a clean chat workflow with example prompts and sidebar configuration.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="architecture" class="section split-section">
+        <div>
+          <p class="eyebrow">Architecture</p>
+          <h2>A focused agent loop</h2>
+          <p>
+            The Streamlit UI collects the prompt, Agno orchestrates the agent, MCPTools
+            retrieves relevant docs, and Nebius generates the final answer.
+          </p>
+        </div>
+        <div class="flow" aria-label="Architecture flow">
+          <span>User</span>
+          <span>Streamlit</span>
+          <span>Agno Agent</span>
+          <span>MCP Docs</span>
+          <span>Nebius</span>
+        </div>
+      </section>
+
+      <section id="setup" class="section setup-section">
+        <div class="section-heading">
+          <p class="eyebrow">Setup</p>
+          <h2>Run locally or deploy to a Python web host</h2>
+        </div>
+        <div class="code-grid">
+          <div>
+            <h3>Install</h3>
+            <pre><code>uv sync</code></pre>
+          </div>
+          <div>
+            <h3>Configure</h3>
+            <pre><code>NEBIUS_API_KEY=your_nebius_api_key_here</code></pre>
+          </div>
+          <div>
+            <h3>Run</h3>
+            <pre><code>uv run streamlit run main.py</code></pre>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Built by Tirth Rank</span>
+      <a href="https://github.com/tirth1263/talk-to-your-docs">github.com/tirth1263/talk-to-your-docs</a>
+    </footer>
+  </body>
+</html>
+

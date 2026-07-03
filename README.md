@@ -4,6 +4,8 @@ Turn any MCP-enabled documentation site into a conversational assistant.
 
 Talk to Your Docs is a Streamlit-based documentation Q&A agent powered by the Agno framework, Model Context Protocol tools, and Nebius AI. Add your Nebius API key, point the app at a documentation URL, and ask natural-language questions. The agent connects to the hosted docs MCP server, searches the source material, reads the relevant pages, and answers with practical context.
 
+**Live project website:** https://tirth1263.github.io/talk-to-your-docs/
+
 ![Talk to Your Docs website preview](site/assets/preview.svg)
 
 ## Why this project is useful
@@ -146,4 +148,3 @@ Add `NEBIUS_API_KEY` as an environment variable in the hosting dashboard.
 ## License
 
 MIT License.
-
